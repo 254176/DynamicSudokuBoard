@@ -84,8 +84,7 @@ func routes(_ app: Application) throws {
     }
 
     app.get("games",":id") { req -> [[Int]] in
-        let empty = [[0,0,0],
-                     [0,0,0]]
+        let empty = Array(repeating: Array(repeating:0, count: 0), count: 0)
         
         
         
