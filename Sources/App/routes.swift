@@ -66,7 +66,7 @@ func generateBoard()->[[Int]]{
         board[8][c] = row9[c]
 
     }
-
+//works
     //board[1] = x
     print(row2)
     print(row3)
