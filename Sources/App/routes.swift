@@ -126,7 +126,7 @@ func routes(_ app: Application) throws {
                                                                  validMove = games[id].insertNumber(xPos:pos.0,yPos:pos.1,number:inputValue)
                                                                  }
                                                                  if !validMove{
-                                                                 print("no change")
+                                                                 print("no change to board")
                                                                  }
                                                                  return Response(status:HTTPResponseStatus.noContent)
                                                                  }
