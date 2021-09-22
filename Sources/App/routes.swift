@@ -109,6 +109,28 @@ func routes(_ app: Application) throws {
          
           return countBoards
     }
+     app.put("games", ":id", "cells", ":boxIndex" , ":cellIndex"){req -> Response                                                                                                                                              
+                                                                   guard let id : Int = req.paramters.get("id"),                                                                                                                
+                                                                         let boxIndex: Int = req.parameters.get("boxIndex"),                                                                                                    
+                                                                         let cellIndex : Int = req.parameters.get("cellIndex")                                                                                                  
+                                                                   else{                                                                                                                                                        
+                                                                       fatalError("theres probably a better solution")                                                                                                          
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                
+                                                                   }                                                                                                                                                            
+                                                                  let pos = BCtoXY(b:boxIndex, c:cellIndex)
+                                                                  var validMove : Bool = games[id].removeNumber(xPos:pos.0,yPos:pos.1)
+                                                                  (try req.content.decode(inputValue.self).inputValue)
+                                                                 if let inputValue = try req.content.decode(inputValue.self).inputValue{
+                                                                 
+                                                                 validMove = games[id].insertNumber(xPos:pos.0,yPos:pos.1,number:inputValue)
+                                                                 }
+                                                                 if !validMove{
+                                                                 print("Invalid move, no change to board state.")
+                                                                 }
+                                                                 return Response(status:HTTPResponseStatus.noContent)
+                                                                 }
+                                                                  }
 }
  
 
