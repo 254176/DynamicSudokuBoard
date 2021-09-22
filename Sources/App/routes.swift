@@ -118,7 +118,7 @@ func routes(_ app: Application) throws {
                                                                                                                                                                                                                                 
                                                                                                                                                                                                                                 
                                                                    }                                                                                                                                                            
-                                                                  let pos = BCtoXY(b:boxIndex, c:cellIndex)
+                                                                  let pos = BCCI(b:boxIndex, c:cellIndex)
                                                                   var validMove : Bool = games[id].removeNumber(xPos:pos.0,yPos:pos.1)
                                                                   (try req.content.decode(inputValue.self).inputValue)
                                                                  if let inputValue = try req.content.decode(inputValue.self).inputValue{
@@ -126,7 +126,7 @@ func routes(_ app: Application) throws {
                                                                  validMove = games[id].insertNumber(xPos:pos.0,yPos:pos.1,number:inputValue)
                                                                  }
                                                                  if !validMove{
-                                                                 print("Invalid move, no change to board state.")
+                                                                 print("no change")
                                                                  }
                                                                  return Response(status:HTTPResponseStatus.noContent)
                                                                  }
