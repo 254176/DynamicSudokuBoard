@@ -23,7 +23,7 @@ func newrow (Old:[Int],takeout:Int) {
     }while 5 > takout
     print(oldv)
 }
-
+//works
 var a = [1,2,3,4,5,6,7,8,9]
 var b = [Any?]()
 var c =  [Any]()
