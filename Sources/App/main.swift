@@ -18,7 +18,7 @@ var row9 = [Int]()
 public class Scram {
     //this function scrambles the entire line it takes the previous line and then shifts either 1 or 3 to the left based on the parameters you input also the previous array is an
     //parameter 
-    
+    //works
 
     func scrambler (rotat:[Int],track:Int) ->[Int]{
         var fullboard = [[Int]]()
