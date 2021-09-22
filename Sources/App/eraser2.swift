@@ -23,7 +23,7 @@ fullboard.append(row7)
 fullboard.append(row8)
 fullboard.append(row9)
 */
-
+//workds properly
 let pppppp = Scram()
 func eraser(diff:String){
     var countempt = 0
